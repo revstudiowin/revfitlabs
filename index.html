@@ -15,19 +15,25 @@
 <body>
 
     <!-- Header & Navigation -->
-    <header class="site-header">
+    <header class="site-header floating-header">
         <div class="header-inner">
-            <a href="#" class="brand-logo" aria-label="RevFitLabs Home">RevFitLabs</a>
+            <a href="#" class="brand-logo" aria-label="RevFitLabs Home">
+                <img src="assets/logo.png" alt="RevFitLabs Logo" class="logo-img">
+            </a>
             
             <nav class="desktop-nav">
                 <ul>
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#services" class="has-dropdown">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a></li>
                     <li><a href="#work">Work</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+
+            <div class="header-actions">
+                <a href="#contact" class="btn btn-primary btn-pill">Get Started &rarr;</a>
+            </div>
 
             <button class="hamburger" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="mobile-menu">
                 <span class="hamburger-line"></span>
@@ -51,57 +57,314 @@
 
     <!-- Hero Section -->
     <main>
-        <section class="hero" id="home">
-            <!-- Background Image -->
-            <div class="hero-bg">
-                <div class="hero-overlay"></div>
-            </div>
+        <section class="hero hero-v2" id="home">
+            <!-- Background Orbs -->
+            <div class="hero-orb orb-top-right"></div>
+            <div class="hero-orb orb-bottom-left"></div>
 
-            <div class="hero-content">
-                <div class="hero-text-content">
-                    <h1 class="hero-headline reveal">
-                        <span class="font-light">Digital Growth & Operations</span><br>
-                        <span class="font-bold">for Fitness Businesses.</span>
-                        <div class="underline-accent"></div>
-                    </h1>
-                    <p class="hero-subheadline reveal delay-1">Leads. Appointments. Systems. All Done For You.</p>
-                </div>
-            </div>
-
-            <!-- Floating CTA -->
-            <a href="#contact" class="floating-cta reveal delay-2" aria-label="Let's Talk">
-                <div class="cta-inner">
-                    <svg viewBox="0 0 100 100" class="cta-svg-text">
-                        <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
-                        <text>
-                            <textPath href="#circlePath" startOffset="0%" class="text-path">
-                                LET'S TALK • LET'S TALK • LET'S TALK • 
-                            </textPath>
-                        </text>
-                    </svg>
-                    <div class="cta-circle">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
+            <div class="hero-content-v2 container">
+                
+                <h1 class="hero-headline-v2 reveal delay-1">
+                    Digital Growth &amp;<br>
+                    Operations for<br>
+                    <span class="text-accent relative">
+                        Fitness Businesses.
+                        <svg class="hand-drawn-underline" viewBox="0 0 500 30" preserveAspectRatio="none">
+                            <path d="M5,25 Q250,5 495,20" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
                         </svg>
+                    </span>
+                </h1>
+
+                <!-- Features Grid -->
+                <div class="hero-features-grid reveal delay-3">
+                    <div class="feature-item">
+                        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+                        <h3 class="feature-title">Websites</h3>
+                        <p class="feature-desc">Modern &bull; Fast &bull; High Converting</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></div>
+                        <h3 class="feature-title">Social Media</h3>
+                        <p class="feature-desc">Content &bull; Design &bull; Management</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></div>
+                        <h3 class="feature-title">Systems &amp; Automation</h3>
+                        <p class="feature-desc">Streamline &bull; Save Time &bull; Scale</p>
+                    </div>
+                    <div class="feature-item border-none">
+                        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+                        <h3 class="feature-title">Ongoing Support</h3>
+                        <p class="feature-desc">Your Goals &bull; Our Priority</p>
                     </div>
                 </div>
-            </a>
 
-            <!-- Massive Brand Text (Background/Bleeding off edges) -->
-            <div class="massive-brand-text" aria-hidden="true">
-                REVFITLABS
-            </div>
+                <div class="hero-cta-row reveal delay-4">
+                    <a href="#contact" class="btn btn-primary btn-pill">Get Started &rarr;</a>
+                    <a href="#work" class="btn btn-secondary btn-pill">See Our Work &rarr;</a>
+                </div>
 
-            <!-- Scroll Indicator -->
-            <div class="scroll-indicator">
-                <span class="scroll-text">Explore</span>
-                <div class="scroll-line"></div>
+                <div class="trusted-by reveal delay-5">
+                    <div class="trusted-line"></div>
+                    <span>Trusted by Fitness Businesses &amp; Online Coaches</span>
+                    <div class="trusted-line"></div>
+                </div>
+                
             </div>
         </section>
         
-        <!-- Placeholder for future sections -->
-        <section id="services" style="height: 100vh; background: #FFFFFF;"></section>
+        <!-- Section 1: The Problem We Solve -->
+        <section id="problem" class="section-dark section-relative">
+            <!-- Massive Brand Text -->
+            <div class="massive-brand-text massive-right" aria-hidden="true" style="color: #2A2A30; z-index: 0; top: 15%;">
+                SYSTEMS
+            </div>
+
+            <!-- Vertical Eyebrow -->
+            <div class="vertical-eyebrow-container vertical-eyebrow-white reveal">
+                <span class="vertical-eyebrow-text">THE PROBLEM</span>
+            </div>
+
+            <div class="container relative-z problem-layout">
+                <div class="problem-text-content">
+                    <h2 class="section-headline reveal delay-1" style="position: relative; display: inline-block;">
+                        <span class="font-light">You Didn't Start a Gym to</span><br>
+                        <span class="font-bold">Become a Marketer, Web Designer, and Bookkeeper.</span>
+                        <div class="underline-accent"></div>
+                    </h2>
+                    <p class="section-subheadline reveal delay-2">Every hour you spend on ads, websites, socials, or admin is an hour you're not spending with the clients who actually pay you. We take the entire digital and operational side off your plate — so you can go back to doing the one thing only you can do: <strong>coaching</strong>.</p>
+                
+                    <div class="closing-block inline-cta-block reveal delay-9">
+                        <p class="closing-line" style="margin-bottom: 0;">One team. Every moving part. Zero overwhelm.</p>
+                        
+                        <!-- CTA Badge reused -->
+                        <a href="#process" class="badge-cta" aria-label="See How It Works">
+                            <div class="cta-inner">
+                                <svg viewBox="0 0 150 150" class="cta-svg-text">
+                                    <path id="circlePath2" d="M 75, 75 m -56, 0 a 56,56 0 1,1 112,0 a 56,56 0 1,1 -112,0" fill="transparent" />
+                                    <text>
+                                        <textPath href="#circlePath2" startOffset="0%" class="text-path" textLength="351" lengthAdjust="spacing">
+                                            SEE HOW IT WORKS • SEE HOW IT WORKS • 
+                                        </textPath>
+                                    </text>
+                                </svg>
+                                <div class="cta-circle">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="problem-cards-content">
+                    <div class="service-cards grid-2-col">
+                        <div class="service-card reveal delay-3">
+                            <div class="card-icon icon-accent">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                            </div>
+                            <h3 class="card-title">Website & Funnels</h3>
+                            <p class="card-desc">A high-converting site and booking funnel built to turn visitors into paying clients.</p>
+                        </div>
+                        <div class="service-card reveal delay-4">
+                            <div class="card-icon icon-accent">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            </div>
+                            <h3 class="card-title">Paid Ads Management</h3>
+                            <p class="card-desc">Meta & Google campaigns engineered to bring in leads who are actually ready to buy.</p>
+                        </div>
+                        <div class="service-card reveal delay-5">
+                            <div class="card-icon icon-accent">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                            <h3 class="card-title">Social Media Management</h3>
+                            <p class="card-desc">Content, posting, and community management that builds trust while you're busy coaching.</p>
+                        </div>
+                        <div class="service-card reveal delay-6">
+                            <div class="card-icon icon-accent">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                            </div>
+                            <h3 class="card-title">Custom Fitness Software</h3>
+                            <p class="card-desc">Client portals, progress tracking, and booking tools tailored to how you run your business.</p>
+                        </div>
+                        <div class="service-card reveal delay-7">
+                            <div class="card-icon icon-accent">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            </div>
+                            <h3 class="card-title">Admin & Back-Office Support</h3>
+                            <p class="card-desc">Inboxes, scheduling, follow-ups, and day-to-day admin — handled, so nothing falls through the cracks.</p>
+                        </div>
+                        <div class="service-card reveal delay-8">
+                            <div class="card-icon icon-accent">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                            </div>
+                            <h3 class="card-title">Finances & Reporting</h3>
+                            <p class="card-desc">Clear, simple financial tracking and reporting so you always know where your business stands.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1.5: Trainerize Management Wrapper -->
+        <div class="trainerize-pin-wrapper" id="trainerize-scroll-wrapper">
+            <section id="trainerize-management" class="section-light section-relative trainerize-pinned-section">
+                <!-- Massive Brand Text -->
+                <div class="massive-brand-text massive-left" aria-hidden="true" style="color: #F0F0F0; z-index: 0; top: 15%;">
+                    MANAGED
+                </div>
+                
+
+
+                <div class="container relative-z trainerize-layout-v2">
+                    
+                    <!-- Left Column: Text -->
+                    <div class="trainerize-text-column">
+                        <div class="eyebrow-line-text reveal">
+                        <span class="eyebrow-small" style="font-size: 1.25rem; letter-spacing: 4px; color: var(--clr-accent);">TRAINERIZE MANAGEMENT</span>
+                    </div>
+
+                        <h2 class="section-headline reveal delay-1" style="position: relative; display: inline-block;">
+                            <span class="font-light">Your clients. Your programs.</span><br>
+                            <span class="font-bold">Your Trainerize — <span style="position: relative; display: inline-block;">managed.<div class="underline-accent" style="width: 100%; bottom: 2px;"></div></span></span>
+                        </h2>
+                        
+                        <p class="section-subheadline reveal delay-2">We handle the day-to-day Trainerize work that keeps you stuck behind the screen, from client onboarding and program setup to check-ins, follow-ups, and client management.</p>
+                        
+                        <p class="punch-line reveal delay-3" style="font-size: 1.5rem; margin-bottom: 3rem;">You focus on coaching. We keep everything moving behind the scenes.</p>
+
+                        <!-- CTA Badge moved to the left column -->
+                        <a href="#contact" class="badge-cta reveal delay-4" aria-label="Book a Free Consultation" style="margin-top: 2rem;">
+                            <div class="cta-inner">
+                                <svg viewBox="0 0 150 150" class="cta-svg-text">
+                                    <path id="circlePath4" d="M 75, 75 m -56, 0 a 56,56 0 1,1 112,0 a 56,56 0 1,1 -112,0" fill="transparent" />
+                                    <text>
+                                        <textPath href="#circlePath4" startOffset="0%" class="text-path" textLength="351" lengthAdjust="spacing">
+                                            FREE CONSULTATION • FREE CONSULTATION • 
+                                        </textPath>
+                                    </text>
+                                </svg>
+                                <div class="cta-circle">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Right Column: Cards Container -->
+                    <div class="trainerize-cards-container">
+                        <div class="pillar-cards-stack">
+                            
+                            <div class="pillar-card stack-card glossy-orange" data-index="0">
+                                <div class="card-icon icon-accent">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                                </div>
+                                <h3 class="pillar-title">Client Setup & Onboarding</h3>
+                                <p class="pillar-desc">Every new client is onboarded and set up correctly, every time.</p>
+                                <div class="card-tags">
+                                    <span class="tag">Client onboarding & setup</span>
+                                    <span class="tag">Workout & program management</span>
+                                </div>
+                            </div>
+
+                            <div class="pillar-card stack-card glossy-orange" data-index="1">
+                                <div class="card-icon icon-accent">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                                </div>
+                                <h3 class="pillar-title">Client Engagement & Accountability</h3>
+                                <p class="pillar-desc">Your clients stay engaged, consistent, and on track — without you chasing them.</p>
+                                <div class="card-tags">
+                                    <span class="tag">Check-ins & follow-ups</span>
+                                    <span class="tag">Progress monitoring</span>
+                                    <span class="tag">Accountability</span>
+                                </div>
+                            </div>
+
+                            <div class="pillar-card stack-card glossy-orange" data-index="2">
+                                <div class="card-icon icon-accent">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                                </div>
+                                <h3 class="pillar-title">Platform & Communication</h3>
+                                <p class="pillar-desc">Trainerize stays organized and client communication stays consistent, quietly, in the background.</p>
+                                <div class="card-tags">
+                                    <span class="tag">Trainerize admin & org</span>
+                                    <span class="tag">Routine communication</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- Section 2: The Result You Get -->
+        <section id="results" class="section-dark section-relative text-center">
+            <!-- Massive Brand Text -->
+            <div class="massive-brand-text massive-left" aria-hidden="true" style="color: #151518; z-index: 0; top: 20%;">
+                AUTOMATE
+            </div>
+
+            <!-- Vertical Eyebrow -->
+            <div class="vertical-eyebrow-container vertical-eyebrow-white reveal">
+                <span class="vertical-eyebrow-text">THE RESULT</span>
+            </div>
+
+            <div class="container relative-z">
+                <h2 class="section-headline massive-headline reveal delay-1" style="position: relative; display: inline-block;">
+                    <span class="font-light">Your Pipeline, </span><span class="font-bold text-accent">Always Full.</span><br>
+                    <span class="font-light">Your Calendar, </span><span class="font-bold text-accent">Always Booked.</span>
+                    <div class="underline-accent"></div>
+                </h2>
+                
+                <p class="section-subheadline centered-sub reveal delay-2">We build and automate the entire lead-to-client journey — from the first click to the signed high-ticket client — so leads don't just come in, they show up, convert, and stay. <strong>No chasing. No guesswork. No empty weeks.</strong></p>
+                
+                <div class="thin-orange-divider reveal delay-3"></div>
+
+                <div class="stats-row reveal delay-4">
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="counter" data-target="3">0</span>x</div>
+                        <div class="stat-label">more qualified leads on average</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="counter" data-target="24">0</span>/7</div>
+                        <div class="stat-label">automated follow-up, never a missed lead</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="counter" data-target="0">0</span></div>
+                        <div class="stat-label">missed appointments with automated reminders</div>
+                    </div>
+                </div>
+                
+                <h3 class="punch-line reveal delay-5">You focus on transformation. We focus on filling the room.</h3>
+                
+                <!-- CTA Badge reused -->
+                <a href="#contact" class="badge-cta cta-badge-dark badge-pulse reveal delay-6" style="margin: 0 auto;" aria-label="Book Free Audit">
+                    <div class="cta-inner">
+                        <svg viewBox="0 0 150 150" class="cta-svg-text">
+                            <path id="circlePath3" d="M 75, 75 m -56, 0 a 56,56 0 1,1 112,0 a 56,56 0 1,1 -112,0" fill="transparent" />
+                            <text>
+                                <textPath href="#circlePath3" startOffset="0%" class="text-path" textLength="351" lengthAdjust="spacing">
+                                    BOOK FREE AUDIT • BOOK FREE AUDIT • 
+                                </textPath>
+                            </text>
+                        </svg>
+                        <div class="cta-circle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
     </main>
 
     <script src="script.js"></script>
