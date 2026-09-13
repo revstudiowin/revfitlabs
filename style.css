@@ -747,6 +747,24 @@ ul {
     color: #FFFFFF;
 }
 
+/* Dark Section Card Styles (Orange Background) */
+.section-dark .service-card {
+    background-color: var(--clr-accent);
+    border-color: var(--clr-accent);
+}
+
+.section-dark .service-card .card-title,
+.section-dark .service-card .card-desc,
+.section-dark .service-card .icon-accent {
+    color: #FFFFFF;
+}
+
+.section-dark .service-card:hover {
+    background-color: #D44C1C; /* Darker orange on hover */
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
 .closing-block {
     margin-top: 3rem;
 }
